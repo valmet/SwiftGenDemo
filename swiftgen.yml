@@ -1,0 +1,20 @@
+input_dir: SwiftGenDemo
+output_dir: SwiftGenDemo/Generated
+strings:
+  inputs: Resources/ja.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: Strings.swift
+ib:
+  inputs: Storyboards
+  outputs:
+    - templateName: scenes-swift4
+      output: StoryboardScenes.swift
+    - templateName: segues-swift4
+      output: StoryboardSegues.swift
+xcassets:
+  - inputs: Resources/Assets.xcassets
+    outputs:
+      - templateName: swift4
+        output: AssetsImages.swift
